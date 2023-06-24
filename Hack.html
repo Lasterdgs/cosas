@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('hack1.gif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .texto-hackeado {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 50vh;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="texto-hackeado" id="texto">Texto Hackeado</div>
+    <!-- Contenido de tu página web aquí -->
+
+    <audio src="hackeados.mp3" autoplay loop></audio>
+
+    <script>
+        var colores = ["green", "purple"]; // Arreglo de colores disponibles
+        var index = 0; // Índice del color actual
+
+        function cambiarColor() {
+            var texto = document.getElementById("texto");
+            texto.style.color = colores[index];
+
+            index = (index + 1) % colores.length; // Avanzar al siguiente color
+        }
+
+        setInterval(cambiarColor, 1000); // Cambiar color cada 1000 milisegundos (1 segundo)
+    </script>
+</body>
+</html>

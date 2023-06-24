@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intranet - Iniciar sesión</title>
+    <link rel="stylesheet" href="personalizados.css">
+    <style>
+        /* Estilos CSS personalizados */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        form {
+            width: 300px;
+            padding: 25px;
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        
+        input {
+            width: 100%;
+            padding: 2px;
+            margin-bottom: 1px;
+        }
+        
+        button {
+            background-color: #012245;
+            color: #fff;
+            padding: 20px 150px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #024779;
+        }
+    </style>
+    <script>
+        // Función para redirigir después de enviar el formulario
+        function redirigir() {
+            window.location.href = "otra_pagina.html";
+        }
+    </script>
+</head>
+<body>
+    <img src="tit_ingreso.jpg">
+    <form onsubmit="redirigir(); return false;">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Iniciar sesión">
+    </form>
+</body>
+</html>
+
